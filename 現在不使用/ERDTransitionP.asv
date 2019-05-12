@@ -1,0 +1,18 @@
+clear all
+close all
+
+dir = ('F:\実験データ\メイン実験(成功数・ERD推移)\kiriyama_10'); %フォルダ識別
+data_mat = 'Testdata_pre';
+load([dir,'\',data_mat]); %データ読み取り
+
+figure
+for i=1:20
+    
+plot(ERDData(i,:))
+grid on
+hold on
+line([1 50],[5 5],'color','r','LineWidth',1,'Linestyle','-');
+line([1 50],[15 15],'color','r','LineWidth',1,'Linestyle','-');
+xlim([1 50])
+ylim([-100 100])
+end
